@@ -1,0 +1,66 @@
+{
+  "name": "new-package",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "repository": "https://github.com/new-package",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "init": "npm i && cd dev && npm i ",
+    "test": "cross-env CI=1 react-scripts-ts test --env=jsdom",
+    "test:watch": "react-scripts-ts test --env=jsdom",
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "start": "cd dev && npm run start",
+    "prepare": "npm run build",
+    "predeploy": "cd dev && npm install && npm run build",
+    "deploy": "gh-pages -d example/build"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "@svgr/rollup": "^2.4.1",
+    "@types/antd": "^1.0.0",
+    "@types/jest": "^23.1.5",
+    "@types/lodash": "^4.14.146",
+    "@types/react": "^16.3.13",
+    "@types/react-dom": "^16.0.5",
+    "@types/react-virtualized": "^9.21.5",
+    "@types/react-window": "^1.8.1",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-runtime": "^6.26.0",
+    "cross-env": "^5.1.4",
+    "gh-pages": "^1.2.0",
+    "less": "^3.10.3",
+    "prop-types": "^15.5.4",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts-ts": "^2.16.0",
+    "rollup": "^1.27.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-ignore": "^1.0.5",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^1.6.3",
+    "rollup-plugin-typescript2": "^0.25.2",
+    "rollup-plugin-uglify": "^6.0.3",
+    "rollup-plugin-url": "^1.4.0",
+    "typescript": "^2.8.3"
+  },
+  "files": [
+    "dist"
+  ]
+}
