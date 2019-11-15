@@ -5,22 +5,10 @@
 ## Install
 
 ```bash
-npm install --save new-package
+git clone https://github.com/weitongxuan/react-module.git
 ```
 
 ## Usage
-
-```tsx
-import * as React from "react";
-
-import MyComponent from "new-package";
-
-class Example extends React.Component {
-  render() {
-    return <MyComponent />;
-  }
-}
-```
 
 ## License
 
