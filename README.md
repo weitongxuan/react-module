@@ -1,12 +1,8 @@
-# virtual-table
+## Set npm registry & token
 
->
-
-## Install
-
-```bash
-npm install --save new-package
-```
+npm config set //npm.pkg.github.com/:\_authToken < your token >
+npm config set //npm.pkg.github.com/processand-technologies/:\_authToken < your token >
+npm config set @processand-technologies:registry https://npm.pkg.github.com/processand-technologies/
 
 ## Usage
 

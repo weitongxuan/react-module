@@ -7,7 +7,7 @@ import svgr from "@svgr/rollup";
 
 import less from "less";
 import pkg from "./package.json";
-// import { uglify } from "rollup-plugin-uglify";
+import { uglify } from "rollup-plugin-uglify";
 
 const processLess = function(context, payload) {
   return new Promise((resolve, reject) => {
@@ -43,7 +43,7 @@ const processLess = function(context, payload) {
 };
 
 export default {
-  input: "src/index.tsx",
+  input: "src/index.ts",
   output: [
     {
       dir: "dist",
@@ -55,15 +55,6 @@ export default {
   plugins: [
     // uglify(),
     external(),
-    postcss({
-      modules: true,
-      extract: false,
-      minimize: true,
-      process: processLess,
-      namedExports: true
-    }),
-    url(),
-    svgr(),
     commonjs(),
     typescript({
       rollupCommonJSResolveHack: true,
